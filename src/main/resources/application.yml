@@ -8,7 +8,7 @@ spring:
       graphiql:
         enabled: true
     datasource:
-      url: "jdbc:postgresql://localhost:5432/codecash"
+      url: "jdbc:postgresql://localhost:6464/codecash"
       username: admin
       password: admin
       driver-class-name: org.postgresql.Driver

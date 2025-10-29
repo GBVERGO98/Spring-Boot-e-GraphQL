@@ -1,10 +1,12 @@
 package com.infoeste.codecash.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Data
 @Entity
 @Table(name = "accounts")
 public class Account {
