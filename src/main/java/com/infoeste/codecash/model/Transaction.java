@@ -28,4 +28,43 @@ public class Transaction {
     @Column(name = "transaction_time", nullable = false)
     private Instant transactionTime;
 
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public Account getPayerAccount() {
+        return payerAccount;
+    }
+
+    public void setPayerAccount(Account payerAccount) {
+        this.payerAccount = payerAccount;
+    }
+
+    public Account getPayeeAccount() {
+        return payeeAccount;
+    }
+
+    public void setPayeeAccount(Account payeeAccount) {
+        this.payeeAccount = payeeAccount;
+    }
+
+    public Instant getTransactionTime() {
+        return transactionTime;
+    }
+
+    public void setTransactionTime(Instant transactionTime) {
+        this.transactionTime = transactionTime;
+    }
 }
