@@ -1,6 +1,8 @@
 package com.infoeste.codecash.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import lombok.ToString;
 
 import java.util.UUID;
 
@@ -24,6 +26,8 @@ public class User {
     @Column(name = "created_at ",nullable = false)
     private String createAt;
 
+    @ToString.Exclude
+    @JsonManagedReference
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Account account;
 }
