@@ -2,10 +2,12 @@ package com.infoeste.codecash.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import lombok.Data;
 import lombok.ToString;
 
 import java.util.UUID;
 
+@Data
 @Entity
 @Table(name="users")
 public class User {
