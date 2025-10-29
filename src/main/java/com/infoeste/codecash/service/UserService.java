@@ -1,10 +1,12 @@
 package com.infoeste.codecash.service;
 
 import com.infoeste.codecash.dto.CreateUserInput;
+import com.infoeste.codecash.model.Account;
 import com.infoeste.codecash.model.User;
 import com.infoeste.codecash.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.time.Instant;
 
 @Service
@@ -23,8 +25,12 @@ public class UserService {
         user.setDocument(input.document());
         user.setPassword(input.password());
         user.setCreateAt(Instant.now().toString());
+        
+        Account account = new Account();
+        account.setUser(user);
+        account.setBalance(BigDecimal.ZERO);
 
-
+        return userRepository.save(user);
     }
 
 }
